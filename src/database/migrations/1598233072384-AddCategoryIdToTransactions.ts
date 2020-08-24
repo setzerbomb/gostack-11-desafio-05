@@ -28,13 +28,5 @@ export default class AddCategoryIdToTransactions1598233072384
     await queryRunner.query(
       'ALTER TABLE "transactions" DROP COLUMN "category_id" CASCADE',
     );
-    await queryRunner.addColumn(
-      'transactions',
-      new TableColumn({
-        name: 'provider',
-        type: 'varchar',
-        isNullable: true,
-      }),
-    );
   }
 }
